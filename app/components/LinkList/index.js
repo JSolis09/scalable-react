@@ -1,24 +1,13 @@
-/**
- *
- * LinkList
- *
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
-// import styled from 'styled-components';
 
 function LinkList({ links }) {
-  const linkNodes = links.map((link) => (
-    <div key={ link.id }>
-      { link.url } - { link.description }
+  const linkNodes = links.map(link => (
+    <div key={link.id}>
+      {link.url} - {link.description}
     </div>
   ));
-  return (
-    <div>
-      { linkNodes }
-    </div>
-  );
+  return <div>{linkNodes}</div>;
 }
 
 LinkList.propTypes = {
@@ -26,8 +15,8 @@ LinkList.propTypes = {
     PropTypes.shape({
       description: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired
-    })
+      id: PropTypes.string.isRequired,
+    }),
   ).isRequired,
 };
 

@@ -1,13 +1,6 @@
-/**
- *
- * NavigationContainer
- *
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
 import injectSaga from 'utils/injectSaga';
@@ -26,14 +19,12 @@ export class NavigationContainer extends React.Component {
   }
 
   render() {
-    return (
-      <Navigation {...this.props} />
-    );
+    return <Navigation {...this.props} />;
   }
 }
 
 NavigationContainer.propTypes = {
-  requestTopics: PropTypes.func.isRequired
+  requestTopics: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = makeSelectNavigationContainer();
@@ -41,7 +32,7 @@ const mapStateToProps = makeSelectNavigationContainer();
 function mapDispatchToProps(dispatch) {
   return {
     requestTopics: () => dispatch(requestTopics()),
-    selectTopic: (topic) => dispatch(selectTopic(topic))
+    selectTopic: topic => dispatch(selectTopic(topic)),
   };
 }
 

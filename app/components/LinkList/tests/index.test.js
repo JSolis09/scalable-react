@@ -1,11 +1,13 @@
-// import React from 'react';
-// import { mount } from 'enzyme';
-// import { enzymeFind } from 'styled-components/test-utils';
-
-// import LinkList from '../index';
+import React from 'react';
+import { shallow } from 'enzyme';
+import LinkList from '../index';
 
 describe('<LinkList />', () => {
-  it('Expect to have unit tests specified', () => {
-    expect(true).toEqual(false);
+  it('should render correctly', () => {
+    const props = {
+      links: [],
+    };
+    const linkComponent = shallow(<LinkList {...props} />);
+    expect(linkComponent).toMatchSnapshot();
   });
 });

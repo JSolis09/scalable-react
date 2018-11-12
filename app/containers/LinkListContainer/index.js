@@ -7,7 +7,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
 import injectSaga from 'utils/injectSaga';
@@ -20,9 +19,7 @@ import LinkList from '../../components/LinkList';
 /* eslint-disable react/prefer-stateless-function */
 export class LinkListContainer extends React.Component {
   render() {
-    return (
-      <LinkList {...this.props} />
-    );
+    return <LinkList {...this.props} />;
   }
 }
 

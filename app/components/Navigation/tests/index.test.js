@@ -1,11 +1,14 @@
-// import React from 'react';
-// import { mount } from 'enzyme';
-// import { enzymeFind } from 'styled-components/test-utils';
-
-// import Navigation from '../index';
+import React from 'react';
+import { shallow } from 'enzyme';
+import Navigation from '../index';
 
 describe('<Navigation />', () => {
-  it('Expect to have unit tests specified', () => {
-    expect(true).toEqual(false);
+  it('should render correctly', () => {
+    const props = {
+      topics: [],
+      selectTopic: () => {},
+    };
+    const linkComponent = shallow(<Navigation {...props} />);
+    expect(linkComponent).toMatchSnapshot();
   });
 });

@@ -1,15 +1,7 @@
-/**
- * Test sagas
- */
-
-/* eslint-disable redux-saga/yield-effects */
-// import { take, call, put, select } from 'redux-saga/effects';
-// import linkListContainerSaga from '../saga';
-
-// const generator = linkListContainerSaga();
+import saga from '../saga';
 
 describe('linkListContainerSaga Saga', () => {
-  it('Expect to have unit tests specified', () => {
-    expect(true).toEqual(false);
+  it('should be defined', () => {
+    expect(saga).toBeDefined();
   });
 });

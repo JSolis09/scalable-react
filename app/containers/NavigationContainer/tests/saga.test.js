@@ -4,12 +4,12 @@
 
 /* eslint-disable redux-saga/yield-effects */
 // import { take, call, put, select } from 'redux-saga/effects';
-// import navigationContainerSaga from '../saga';
+import saga from '../saga';
 
 // const generator = navigationContainerSaga();
 
 describe('navigationContainerSaga Saga', () => {
-  it('Expect to have unit tests specified', () => {
-    expect(true).toEqual(false);
+  it('should be defined', () => {
+    expect(saga).toBeDefined();
   });
 });
