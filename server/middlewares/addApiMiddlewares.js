@@ -30,12 +30,14 @@ router.get('/topics/:name/links', (req, res) => {
           url: 'https://github.com/facebook/react',
           topicName: 'links',
           id: 'fake1',
+          voteCount: 2
         },
         {
           description: 'Some old videos',
           url: 'http://tagtree.io',
           topicName: 'links',
           id: 'fake2',
+          voteCount: 5
         },
       ];
       break;
@@ -46,6 +48,7 @@ router.get('/topics/:name/links', (req, res) => {
           url: 'https://22seven.com',
           topicName: 'apps',
           id: 'fake3',
+          voteCount: 4
         },
       ];
       break;
@@ -56,6 +59,7 @@ router.get('/topics/:name/links', (req, res) => {
           url: 'https://google.com',
           topicName: 'news',
           id: 'fake4',
+          voteCount: 3
         },
       ];
       break;
