@@ -3,6 +3,10 @@ import navigationContainerReducer from '../reducer';
 
 describe('navigationContainerReducer', () => {
   it('returns the initial state', () => {
-    expect(navigationContainerReducer(undefined, {})).toEqual(fromJS({}));
+    const expectedState = {
+      topics: [],
+    };
+    const state = navigationContainerReducer(undefined, {});
+    expect(state).toEqual(fromJS(expectedState));
   });
 });

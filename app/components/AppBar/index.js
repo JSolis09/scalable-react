@@ -8,12 +8,8 @@ function AppBar() {
       <div className="iconButton">
         <FontAwesome className="icon" name="bars" />
       </div>
-      <div className="heading">
-        Coder daily
-      </div>
-      <div className="linkContainer">
-        Log in
-      </div>
+      <div className="heading">Coder daily</div>
+      <div className="linkContainer">Log in</div>
     </div>
   );
 }

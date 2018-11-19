@@ -1,16 +1,8 @@
-/*
- *
- * LinkListContainer reducer
- *
- */
-
 import { fromJS } from 'immutable';
-import {
-  REQUEST_LINKS_SUCCEEDED
-} from './constants';
+import { REQUEST_LINKS_SUCCEEDED } from './constants';
 
 export const initialState = fromJS({
-  links: []
+  links: [],
 });
 
 function linkListContainerReducer(state = initialState, action) {

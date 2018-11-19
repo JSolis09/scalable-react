@@ -5,13 +5,10 @@
  */
 
 import { fromJS } from 'immutable';
-import {
-  REQUEST_TOPICS_SUCCEEDED,
-  SELECT_TOPIC
-} from './constants';
+import { REQUEST_TOPICS_SUCCEEDED, SELECT_TOPIC } from './constants';
 
 export const initialState = fromJS({
-  topics: []
+  topics: [],
 });
 
 function navigationContainerReducer(state = initialState, action) {

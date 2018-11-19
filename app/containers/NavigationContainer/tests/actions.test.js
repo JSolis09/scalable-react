@@ -1,13 +1,13 @@
-import { defaultAction } from '../actions';
-import { DEFAULT_ACTION } from '../constants';
+import { requestTopics } from '../actions';
+import { REQUEST_TOPICS } from '../constants';
 
 describe('NavigationContainer actions', () => {
   describe('Default Action', () => {
     it('has a type of DEFAULT_ACTION', () => {
       const expected = {
-        type: DEFAULT_ACTION,
+        type: REQUEST_TOPICS,
       };
-      expect(defaultAction()).toEqual(expected);
+      expect(requestTopics()).toEqual(expected);
     });
   });
 });
