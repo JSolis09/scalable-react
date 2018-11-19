@@ -10,7 +10,7 @@ import reducer from './reducer';
 import saga from './saga';
 
 import Navigation from '../../components/Navigation';
-import { requestTopics, selectTopic } from './actions';
+import { requestTopics, selectTopic, toggleDrawer } from './actions';
 
 /* eslint-disable react/prefer-stateless-function */
 export class NavigationContainer extends React.Component {
@@ -33,6 +33,7 @@ function mapDispatchToProps(dispatch) {
   return {
     requestTopics: () => dispatch(requestTopics()),
     selectTopic: topic => dispatch(selectTopic(topic)),
+    toggleDrawer: () => dispatch(toggleDrawer()),
   };
 }
 

@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from '../Link';
 
 function LinkList({ links }) {
-  const linkNodes = links.map(link => (
-    <div key={link.id}>
-      {link.url} - {link.description}
-    </div>
+  const linkNodes = links.map(l => (
+    <Link key={l.id} link={l} />
   ));
   return <div>{linkNodes}</div>;
 }
