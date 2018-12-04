@@ -24,7 +24,7 @@ export function* fetchTopics() {
 
 export function* selectDefaultTopic() {
   const state = yield select(selectNavigationContainer());
-  if (!state.selectedTopic) {
+  if (!state.selectedTopic && history.location.pathname === '/') {
     history.push(`/topics/${state.topics[0].name}`);
   }
 }
