@@ -56,9 +56,9 @@ const withConnect = connect(
 const withReducer = injectReducer({ key: 'linkListContainer', reducer });
 const withSaga = injectSaga({ key: 'linkListContainer', saga });
 
-export default withRouter(compose(
+export default compose(
   withRouter,
   withReducer,
   withSaga,
   withConnect,
-)(LinkListContainer));
+)(LinkListContainer);
