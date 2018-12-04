@@ -1,19 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import * as styles from './styles.css';
 
 function Drawer({ items, selectItem, itemLabelAttr, itemKeyAttr, isDrawerOpen }) {
-  console.log(styles);
-  const itemNodes = items.map(item => (
-    <div
-      role="none"
-      className="item"
-      key={item[itemKeyAttr]}
-      onClick={() => selectItem(item)}>
-        {item[itemLabelAttr]}
-    </div>
-  ));
+  const itemNodes = items.map(item => {
+    const url = `/topics/${item[itemKeyAttr]}`;
+    return (
+      <Link
+        role="none"
+        className="item"
+        key={item[itemKeyAttr]}
+        onClick={() => selectItem(item)}
+        to={url}>
+          {item[itemLabelAttr]}
+      </Link>
+    )
+  });
   return (
     <div className={classNames('drawer', { 'drawerOpen': isDrawerOpen })}>
       {itemNodes}

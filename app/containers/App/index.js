@@ -7,22 +7,26 @@
  *
  */
 
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-
-import HomePage from 'containers/HomePage/Loadable';
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
-
+import { Router, Switch, Route } from 'react-router-dom';
 import GlobalStyle from '../../global-styles';
+import history from 'utils/history';
+import HomePage from 'containers/HomePage/Loadable';
+import LinkListContainer from 'containers/LinkListContainer';
+import NavigationContainer from 'containers/NavigationContainer';
+import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import React from 'react';
 
 export default function App() {
   return (
-    <div>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
-      <GlobalStyle />
-    </div>
+    <Router history={history}>
+      <div>
+        <NavigationContainer />
+        <Switch>
+          <Route exact={true} path="/" component={HomePage} />
+          <Route path="/topics/:topicName" component={LinkListContainer} />
+        </Switch>
+        <GlobalStyle />
+      </div>
+    </Router>
   );
 }

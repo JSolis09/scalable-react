@@ -20,6 +20,8 @@
     text-transform: uppercase;
     cursor: pointer;
     border-bottom: solid 1px #f6f6f6;
+    display: block;
+    text-decoration: none;
 }
 
 .item:hover {
