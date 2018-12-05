@@ -7,31 +7,19 @@
     margin: 100px auto;
  }
 
- .heading {
+ .login .heading {
      font-size: 22px;
      color: #222;
      margin-bottom: 20px;
  }
 
- .input {
-     border-bottom-color: rgba(0, 0, 0, 0.2);
-     border-bottom-width: 1px;
-     border-bottom-style: solid;
-     padding: 5px;
-     border-top: 0;
-     border-left: 0;
-     border-right: 0;
-     width: 100%;
-     font-size: 18px;
- }
-
- .actionContainer {
+ .login .actionContainer {
      display: flex;
      justify-content: flex-end;
      margin-top: 25px;
  }
 
- .button {
+ .login .button {
      text-transform: uppercase;
      padding: 10px;
      border-radius: 2;
@@ -39,18 +27,7 @@
      color: #00afcc;
  }
 
- .button:hover {
+ .login .button:hover {
      background-color: rgba(0, 0, 0, 0.05);
      font-weight: 700;
- }
-
- .errorMessage {
-     color: #ce1313;
-     padding-top: 10px;
-     padding-bottom: 10px;
-     font-size: 14px; 
- }
-
- .inputError {
-     border-bottom-color: #ce1313;
  }

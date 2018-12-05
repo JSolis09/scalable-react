@@ -8,7 +8,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-import { withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
@@ -17,6 +17,7 @@ import reducer from './reducer';
 import saga from './saga';
 import LinkList from '../../components/LinkList';
 import { requestLinks } from './actions';
+import LinkFormContainer from '../LinkFormContainer';
 
 /* eslint-disable react/prefer-stateless-function */
 export class LinkListContainer extends React.Component {
@@ -31,7 +32,12 @@ export class LinkListContainer extends React.Component {
   }
 
   render() {
-    return <LinkList {...this.props} />;
+    return (
+      <div>
+        <LinkList {...this.props} />
+        <Route exact path="/topics/:topicName/add" component={LinkFormContainer} />
+      </div>
+    );
   }
 }
 

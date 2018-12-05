@@ -1,0 +1,53 @@
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.linkForm {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+    padding: 10px;
+    width: 320px;
+    border-radius: 2px;
+    margin: 100px auto;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    margin-left: -160px; 
+}
+
+.linkForm .heading {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.linkForm .actionContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.linkForm .button {
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 2;
+    cursor: pointer;
+    color: #00afcc;
+}
+
+.linkForm  .button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    font-weight: 700;
+}
+
+.linkForm .input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

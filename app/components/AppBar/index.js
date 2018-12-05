@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from 'react-fontawesome';
-import './styles.css';
+import * as styles from './styles.css';
 import { Link } from 'react-router-dom';
 
 function AppBar({ toggleDrawer, email }) {
