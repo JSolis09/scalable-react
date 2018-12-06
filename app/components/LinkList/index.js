@@ -1,15 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from '../Link';
+import IconButton from '../IconButton';
+import styles from './styles.css';
 
-function LinkList({ links, topicName }) {
+function LinkList({ links, topicName, startAdd }) {
   const linkNodes = links.map(l => (
     <Link key={l.id} link={l} />
   ));
   return (
-    <div>
+    <div className="linkList">
       <h1>{topicName}</h1>
       {linkNodes}
+      <IconButton icon="plus" buttonClass="button" iconClass="icon" onClick={() => startAdd(topicName)} />
     </div>
   );
 }

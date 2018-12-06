@@ -30,8 +30,7 @@ export function* selectDefaultTopic() {
 }
 
 export function* pushTopic(action) {
-  console.log(action);
-  //yield put(push(`/topics/${action.topic.name}`));
+  history.push(`/topics/${action.topic.name}`);
 }
 
 export default function* rootSaga() {
