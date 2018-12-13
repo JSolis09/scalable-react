@@ -1,10 +1,14 @@
 // import { take, call, put, select } from 'redux-saga/effects';
 
 import { all, call, select, put, takeLatest } from 'redux-saga/effects';
-import { REQUEST_TOPICS, SELECT_TOPIC, REQUEST_TOPICS_SUCCEEDED } from './constants';
+import {
+  REQUEST_TOPICS,
+  SELECT_TOPIC,
+  REQUEST_TOPICS_SUCCEEDED,
+} from './constants';
 import { requestTopicsSucceeded, requestTopicsFailed } from './actions';
 import history from '../../utils/history';
-//import { push } from 'connected-react-router/immutable';
+// import { push } from 'connected-react-router/immutable';
 import selectNavigationContainer from './selectors';
 
 export function fetchTopicsFromServer() {

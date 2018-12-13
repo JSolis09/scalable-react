@@ -7,17 +7,15 @@ function Link({ link }) {
   return (
     <div className="link">
       <div className="votingContainer">
-        <div className="votingCount">
-          {link.voteCount}
-        </div>
+        <div className="votingCount">{link.voteCount}</div>
       </div>
       <div className="detailsContainer">
         <div>
-          <a href={link.url} className="linkAnchor">{link.url}</a>
+          <a href={link.url} className="linkAnchor">
+            {link.url}
+          </a>
         </div>
-        <div className="description">
-          {link.description}
-        </div>
+        <div className="description">{link.description}</div>
       </div>
     </div>
   );

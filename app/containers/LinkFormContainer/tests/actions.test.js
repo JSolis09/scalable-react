@@ -1,13 +1,13 @@
-import { defaultAction } from '../actions';
-import { DEFAULT_ACTION } from '../constants';
+import { addLink } from '../actions';
+import { ADD_LINK } from '../constants';
 
 describe('LinkFormContainer actions', () => {
-  describe('Default Action', () => {
-    it('has a type of DEFAULT_ACTION', () => {
+  describe('Add Link Action', () => {
+    it('has a type of ADD_LINK', () => {
       const expected = {
-        type: DEFAULT_ACTION,
+        type: ADD_LINK,
       };
-      expect(defaultAction()).toEqual(expected);
+      expect(addLink()).toEqual(expected);
     });
   });
 });

@@ -1,5 +1,4 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
-import { SELECT_TOPIC } from '../NavigationContainer/constants';
 import { REQUEST_LINKS, START_ADD } from './constants';
 import { requestLinksFailed, requestLinksSucceeded } from './actions';
 import history from '../../utils/history';

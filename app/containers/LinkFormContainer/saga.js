@@ -3,7 +3,7 @@ import { ADD_LINK, ADD_LINK_CANCELLED } from './constants';
 import { addLinkSuccess, addLinkFailed } from './actions';
 import history from '../../utils/history';
 
-function createLink({topicName, url, description}) {
+function createLink({ topicName, url, description }) {
   return fetch(`http://localhost:3000/api/topics/${topicName}/links`, {
     method: 'POST',
     headers: {
@@ -13,11 +13,9 @@ function createLink({topicName, url, description}) {
     body: JSON.stringify({
       url,
       description,
-      topicName
+      topicName,
     }),
-  }).then(
-    response => response.json(),
-  );
+  }).then(response => response.json());
 }
 // Individual exports for testing
 export function* addLink(action) {
@@ -25,7 +23,7 @@ export function* addLink(action) {
     const serverLink = yield call(createLink, action.link);
     yield put(addLinkSuccess(serverLink));
     history.goBack();
-  } catch(e) {
+  } catch (e) {
     yield put(addLinkFailed(action.link, e.message));
   }
 }

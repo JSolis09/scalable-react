@@ -17,10 +17,12 @@ const selectNavigationContainerDomain = state =>
  * Default selector used by NavigationContainer
  */
 
-const makeSelectNavigationContainer = () => createSelector(
-  selectNavigationContainerDomain,
-  selectLoginContainer(),
-  (substate, loginSubState) => Object.assign(substate.toJS(), loginSubState));
+const makeSelectNavigationContainer = () =>
+  createSelector(
+    selectNavigationContainerDomain,
+    selectLoginContainer(),
+    (substate, loginSubState) => Object.assign(substate.toJS(), loginSubState),
+  );
 
 export default makeSelectNavigationContainer;
 export { selectNavigationContainerDomain };

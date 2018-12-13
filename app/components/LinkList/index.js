@@ -1,24 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from '../Link';
+import LinkButton from '../Link';
 import IconButton from '../IconButton';
-import styles from './styles.css';
+import './styles.css';
 
 function LinkList({ links, topicName, startAdd }) {
-  const linkNodes = links.map(l => (
-    <Link key={l.id} link={l} />
-  ));
+  const linkNodes = links.map(l => <LinkButton key={l.id} link={l} />);
   return (
     <div className="linkList">
       <h1>{topicName}</h1>
       {linkNodes}
-      <IconButton icon="plus" buttonClass="button" iconClass="icon" onClick={() => startAdd(topicName)} />
+      <IconButton
+        icon="plus"
+        buttonClass="button"
+        iconClass="icon"
+        onClick={() => startAdd(topicName)}
+      />
     </div>
   );
 }
 
 LinkList.propTypes = {
   topicName: PropTypes.string.isRequired,
+  startAdd: PropTypes.func.isRequired,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       description: PropTypes.string.isRequired,

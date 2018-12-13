@@ -8,12 +8,12 @@ import { fromJS } from 'immutable';
 import {
   REQUEST_TOPICS_SUCCEEDED,
   SELECT_TOPIC,
-  TOGGLE_DRAWER
+  TOGGLE_DRAWER,
 } from './constants';
 
 export const initialState = fromJS({
   topics: [],
-  isDrawerOpen: false
+  isDrawerOpen: false,
 });
 
 function navigationContainerReducer(state = initialState, action) {

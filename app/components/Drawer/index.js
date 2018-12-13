@@ -1,23 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import * as styles from './styles.css';
+import './styles.css';
 
-function Drawer({ items, selectItem, itemLabelAttr, itemKeyAttr, isDrawerOpen }) {
-  const itemNodes = items.map(item => {
-    const url = `/topics/${item[itemKeyAttr]}`;
-    return (
-      <div
-        role="none"
-        className="item"
-        key={item[itemKeyAttr]}
-        onClick={() => selectItem(item)}>
-          {item[itemLabelAttr]}
-      </div>
-    )
-  });
+function Drawer({
+  items,
+  selectItem,
+  itemLabelAttr,
+  itemKeyAttr,
+  isDrawerOpen,
+}) {
+  const itemNodes = items.map(item => (
+    <div
+      role="none"
+      className="item"
+      key={item[itemKeyAttr]}
+      onClick={() => selectItem(item)}
+    >
+      {item[itemLabelAttr]}
+    </div>
+  ));
   return (
-    <div className={classNames('drawer', { 'drawerOpen': isDrawerOpen })}>
+    <div className={classNames('drawer', { drawerOpen: isDrawerOpen })}>
       {itemNodes}
     </div>
   );
