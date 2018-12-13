@@ -40,8 +40,8 @@ const mapStateToProps = createStructuredSelector({
 
 function mapDispatchToProps(dispatch) {
   return {
-    login: (email) => dispatch(login(email)),
-    cancelLogin: () => dispatch(cancelLogin())
+    login: email => dispatch(login(email)),
+    cancelLogin: () => dispatch(cancelLogin()),
   };
 }
 

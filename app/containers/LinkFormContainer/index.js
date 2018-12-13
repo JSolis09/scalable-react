@@ -7,7 +7,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
 import injectSaga from 'utils/injectSaga';
@@ -21,9 +20,7 @@ import { addLink, addLinkCancelled } from './actions';
 /* eslint-disable react/prefer-stateless-function */
 export class LinkFormContainer extends React.Component {
   render() {
-    return (
-      <LinkForm {...this.props} />
-    );
+    return <LinkForm {...this.props} />;
   }
 }
 
@@ -36,7 +33,7 @@ const mapStateToProps = makeSelectLinkFormContainer();
 
 function mapDispatchToProps(dispatch) {
   return {
-    addLink: (link) => dispatch(addLink(link)),
+    addLink: link => dispatch(addLink(link)),
     addLinkCancelled: () => dispatch(addLinkCancelled()),
   };
 }

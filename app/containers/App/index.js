@@ -8,7 +8,6 @@
  */
 
 import { Router, Switch, Route } from 'react-router-dom';
-import GlobalStyle from '../../global-styles';
 import history from 'utils/history';
 import HomePage from 'containers/HomePage/Loadable';
 import LinkListContainer from 'containers/LinkListContainer';
@@ -16,6 +15,7 @@ import LoginContainer from 'containers/LoginContainer';
 import NavigationContainer from 'containers/NavigationContainer';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import React from 'react';
+import GlobalStyle from '../../global-styles';
 
 export default function App() {
   return (
@@ -23,7 +23,7 @@ export default function App() {
       <div>
         <NavigationContainer />
         <Switch>
-          <Route exact={true} path="/" component={HomePage} />
+          <Route exact path="/" component={HomePage} />
           <Route path="/login" component={LoginContainer} />
           <Route path="/topics/:topicName" component={LinkListContainer} />
           <Route component={NotFoundPage} />

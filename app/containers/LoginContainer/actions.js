@@ -1,13 +1,4 @@
-/*
- *
- * LoginContainer actions
- *
- */
-
-import {
-  LOGIN,
-  CANCEL_LOGIN,
-} from './constants';
+import { LOGIN, CANCEL_LOGIN } from './constants';
 
 export function login(email) {
   return {

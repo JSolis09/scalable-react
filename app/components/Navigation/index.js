@@ -4,12 +4,16 @@ import styles from './styles.css';
 import AppBar from '../AppBar';
 import Drawer from '../Drawer';
 
-function Navigation({ topics, selectTopic, toggleDrawer, isDrawerOpen, email }) {
+function Navigation({
+  topics,
+  selectTopic,
+  toggleDrawer,
+  isDrawerOpen,
+  email,
+}) {
   return (
     <div className={styles.navigation}>
-      <AppBar
-        toggleDrawer={toggleDrawer}
-        email={email} />
+      <AppBar toggleDrawer={toggleDrawer} email={email} />
       <Drawer
         items={topics}
         selectItem={selectTopic}

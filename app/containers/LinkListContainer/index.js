@@ -35,7 +35,11 @@ export class LinkListContainer extends React.Component {
     return (
       <div>
         <LinkList {...this.props} />
-        <Route exact path="/topics/:topicName/add" component={LinkFormContainer} />
+        <Route
+          exact
+          path="/topics/:topicName/add"
+          component={LinkFormContainer}
+        />
       </div>
     );
   }
@@ -50,8 +54,8 @@ const mapStateToProps = makeSelectLinkListContainer();
 
 function mapDispatchToProps(dispatch) {
   return {
-    requestLinks: (topicName) => dispatch(requestLinks(topicName)),
-    startAdd: (topicName) => dispatch(startAdd(topicName)), 
+    requestLinks: topicName => dispatch(requestLinks(topicName)),
+    startAdd: topicName => dispatch(startAdd(topicName)),
   };
 }
 
