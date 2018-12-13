@@ -1,4 +1,4 @@
-import { all, put, takeLatest } from 'redux-saga/effects';
+import { all, takeLatest } from 'redux-saga/effects';
 import { CANCEL_LOGIN, LOGIN } from './constants';
 import history from '../../utils/history';
 

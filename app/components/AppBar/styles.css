@@ -8,17 +8,17 @@
     justify-content: space-between;
 }
 
-.iconButton {
+.appBar .iconButton {
     cursor: pointer;
     margin-right: 15px;
 }
 
-.icon {
+.appBar .icon {
     font-size: 20px;
     color: #fff;
 }
 
-.icon:hover {
+.appBar .icon:hover {
     color: #e5e5e5;
 }
 

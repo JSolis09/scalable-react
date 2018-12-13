@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FontAwesome from 'react-fontawesome';
+import IconButton from '../IconButton';
 import * as styles from './styles.css';
 import { Link } from 'react-router-dom';
 
@@ -9,9 +9,11 @@ function AppBar({ toggleDrawer, email }) {
 
   return (
     <div className="appBar">
-      <div role="none" className="iconButton" onClick={toggleDrawer}>
-        <FontAwesome className="icon" name="bars" />
-      </div>
+       <IconButton
+          icon="bars"
+          buttonClass="iconButton"
+          iconClass="icon"
+          onClick={toggleDrawer}/>
       <div className="heading">Coder daily</div>
       <div className="linkContainer">
           { loginLink }

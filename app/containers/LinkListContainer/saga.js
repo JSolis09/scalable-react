@@ -1,8 +1,8 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
 import { SELECT_TOPIC } from '../NavigationContainer/constants';
-import { REQUEST_LINKS } from './constants';
+import { REQUEST_LINKS, START_ADD } from './constants';
 import { requestLinksFailed, requestLinksSucceeded } from './actions';
-
+import history from '../../utils/history';
 
 function fetchLinksFromServer(topicName) {
   return fetch(`http://localhost:3000/api/topics/${topicName}/links`).then(
@@ -19,9 +19,13 @@ function* fetchLinks(action) {
   }
 }
 
+function* startAdd(action) {
+  history.push(`/topics/${action.topicName}/add`);
+}
+
 export default function* rootSaga() {
   yield all([
-    takeLatest(SELECT_TOPIC, fetchLinks),
     takeLatest(REQUEST_LINKS, fetchLinks),
+    takeLatest(START_ADD, startAdd),
   ]);
 }

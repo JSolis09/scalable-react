@@ -16,7 +16,7 @@ import makeSelectLinkListContainer from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import LinkList from '../../components/LinkList';
-import { requestLinks } from './actions';
+import { requestLinks, startAdd } from './actions';
 import LinkFormContainer from '../LinkFormContainer';
 
 /* eslint-disable react/prefer-stateless-function */
@@ -51,6 +51,7 @@ const mapStateToProps = makeSelectLinkListContainer();
 function mapDispatchToProps(dispatch) {
   return {
     requestLinks: (topicName) => dispatch(requestLinks(topicName)),
+    startAdd: (topicName) => dispatch(startAdd(topicName)), 
   };
 }
 
